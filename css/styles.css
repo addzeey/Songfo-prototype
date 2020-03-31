@@ -1,0 +1,319 @@
+@keyframes slideText{
+  from { left: 100%;}
+  to { left: -100%;}
+}
+@-webkit-keyframes slideText {
+  from { left: 100%;}
+  to { left: -100%;}
+}
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Mali|Pacifico&display=swap');
+body{
+  margin: 0;
+  padding: 0;
+  font-size: 10px;
+  font-family: 'Montserrat', sans-serif;
+}
+#album-cover {
+  width: 78px;
+  height: 78px;
+  float: left;
+  margin: 0px 8px 0px 0px;
+  border: 1px solid #f8ff00;
+  box-sizing: content-box;
+}
+#album-image{
+  height: inherit;
+  width: inherit;
+}
+#artist-name {
+  overflow: hidden;
+  background-color: #00000047;
+  border-radius: 6px;
+  padding: 5px;
+  margin: 0px 0px 04px 0px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 10px;
+  width: 79%;
+  border: 1.3px solid #e4ff00;
+  box-sizing: content-box;
+  height: 25px;
+}
+#track-name {
+  overflow: hidden;
+  background-color: #00000047;
+  border-radius: 6px;
+  padding: 5px;
+  margin: 8px 0px 0px 0px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 10px;
+  width: 79%;
+  border: 1.3px solid #e4ff00;
+  box-sizing: content-box;
+  height: 25px;
+}
+#artist-name::before {
+  content: "Artist";
+    position: absolute;
+    z-index: 99;
+    color: #000000;
+    padding: 0px 10px;
+    margin: -10px 0px 0px 0px;
+    letter-spacing: 1px;
+    background-color: #fff700;
+    border-radius: 4px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+#track-name::before {
+    content: "Track";
+    position: absolute;
+    z-index: 99;
+    color: #000000;
+    padding: 0px 10px;
+    margin: -10px 0px 0px 0px;
+    letter-spacing: 1px;
+    background-color: #fff700;
+    border-radius: 4px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+#artist-name h1, #track-name h1 {
+  margin: 0px;
+  padding: 4px 0px 0px 0px;
+  font-size: 1.1rem;
+  color: #ffffff;
+  font-weight: 700;
+  letter-spacing: 1.2;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+.text-overflows{
+  animation-name: slide;
+  animation-duration: 10s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  -webkit-animation-name: slide;
+  -webkit-animation-duration: 10s;
+  -webkit-animation-timing-function:linear;
+  -webkit-animation-iteration-count: infinite;
+}
+#song-wrap {
+    width: 500px;
+    height: 86px;
+    background-color: #3d1552;
+    -webkit-transition: top 1s;
+    transition: top 1s;
+    position: absolute;
+    overflow: hidden;
+    padding: 8px;
+    border-radius: 0px 0px 6px 6px;
+    margin-left: 5px;
+}
+.visible{
+  top: 0;
+}
+.hidden{
+  top: -104;
+}
+.PageWrap{
+  width: 100%;
+  height: 100%;
+  display: grid;
+  position: absolute;
+  background-color: #0b1511;
+}
+#Authorize{
+  margin: auto;
+  padding: 100px;
+  background-color: #16251f;
+  border: 1px solid #356b55;
+  font-weight: 400;
+  text-align: center;
+  color: #ffffff;
+  display: grid;
+}
+#Authorize h1{
+  font-size: 2em;
+  font-weight: 400;
+}
+#Authorize h2 a {
+    font-size: 1.4rem;
+    color: #fbff00;
+    font-weight: 700;
+    text-decoration: none;
+}
+#Authorize h2 a:hover {
+    color: #00ffad;
+    transition: 0.5s;
+
+}
+#Authorize h3 {
+    background-color: #02100b;
+    padding: 10px;
+    border: 1px solid #356b55;
+    text-transform: uppercase;
+    color: #fff700;
+}
+#Authorize h3 a {
+    color: #ffffff;
+    filter: blur(0.2rem);
+}
+#Authorize p {
+    font-size: 0.8rem;
+    color: #ffff07;
+}
+.customize-form{
+  grid-template-columns: auto 50px;
+  grid-template-rows: 34px 34px 34px 34px;
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+  display: grid;
+  justify-items: left;
+  margin: 0px auto;
+}
+#customize-wrap{
+  display: grid;
+  grid-template-columns: auto auto;
+  position: relative;
+}
+.color-label {
+  display: grid;
+  font-family: inherit;
+  font-size: 1rem;
+  padding: 10px;
+  font-weight: 400;
+}
+.picker-wrap {
+  display: grid;
+}
+#album-cover-preview {
+  width: 78px;
+  height: 78px;
+  float: left;
+  margin: 0px 8px 0px 0px;
+  border: 1px solid #f8ff00;
+  box-sizing: content-box;
+}
+#album-image-preview {
+  height: inherit;
+  width: inherit;
+}
+#artist-name-preview {
+  overflow: hidden;
+  background-color: #00000047;
+  border-radius: 6px;
+  padding: 5px;
+  margin: 0px 0px 04px 0px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 10px;
+  width: 70%;
+  border: 1.3px solid #e4ff00;
+  box-sizing: content-box;
+  height: 25px;
+}
+#track-name-preview {
+  overflow: hidden;
+      background-color: #00000047;
+      border-radius: 6px;
+      padding: 5px;
+      margin: 8px 0px 0px 0px;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 400;
+      font-size: 10px;
+      width: 70%;
+      border: 1.3px solid #e4ff00;
+      box-sizing: content-box;
+      height: 25px;
+}
+#artist-name-title-preview {
+  content: "Artist";
+    position: absolute;
+    z-index: 99;
+    color: #000000;
+    padding: 0px 10px;
+    margin: -10px 0px 0px 0px;
+    letter-spacing: 1px;
+    background-color: #fff700;
+    border-radius: 4px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+#track-name-title-preview {
+    content: "Track";
+    position: absolute;
+    z-index: 99;
+    color: #000000;
+    padding: 0px 10px;
+    margin: -10px 0px 0px 0px;
+    letter-spacing: 1px;
+    background-color: #fff700;
+    border-radius: 4px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+#artist-name-preview h1, #track-name-preview h1 {
+  margin: 0px;
+  padding: 4px 0px 0px 0px;
+  font-size: 1.1rem;
+  color: inherit;
+  font-weight: 700;
+  letter-spacing: 1.2;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+.text-overflows-preview{
+  animation-name: slide;
+  animation-duration: 10s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  -webkit-animation-name: slide;
+  -webkit-animation-duration: 10s;
+  -webkit-animation-timing-function:linear;
+  -webkit-animation-iteration-count: infinite;
+}
+#song-wrap-preview {
+  width: 350px;
+  margin: 0px 0px 0px 10px;
+  height: 86px;
+  background-color: #3d1552;
+  overflow: hidden;
+  justify-items: right;
+  padding: 8px;
+  text-align: left;
+  border-radius: 0px 0px 6px 6px;
+}
+#btn-submit {
+  padding: 10px;
+  background-color: #eff700;
+  color: #000000;
+  font-weight: 700;
+  font-size: 1rem;
+  position: absolute;
+  right: 24%;
+  bottom: 0;
+}
+#btn-submit:hover{
+  cursor: pointer;
+  background-color: green;
+}
+#Header-Title {
+  font-size: 42px;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: 2px;
+  font-family: 'Pacifico', cursive;
+}
+#Header-Title::after {
+  content: "beta";
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  background-color: #0b1511;
+  padding: 6px;
+  bottom: 15px;
+  border-radius: 10px;
+}
